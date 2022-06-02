@@ -15,12 +15,15 @@ vector<string> split(const string &);
 
 vector<int> reverseArray(vector<int> a) {
     //Sort the array from last element to first.
+    int tempValue = 0;
+    int arraySize = a.size();
 
-    //create a count controlled loop that starts at the first index i and sets the element to the value of  n-i.
-    // e.g. index 0 should be replaced with the value at index n-0. For array of size 5, index 4 should be replaced with
-    // the value at  n-4.
+    //create a count controlled loop that starts at the first index i and sets the element to the value of  (n-1)-i.
+
     for (int i = 0; i < a.size(); i++) {
-        a[i] = (a.size()-1);
+        tempValue = a[i];
+        a[i] = a[((arraySize - 1) - i)];
+        a[(arraySize - 1) - i] = tempValue;
     }
 
     //return the array
