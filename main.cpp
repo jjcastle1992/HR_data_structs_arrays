@@ -44,27 +44,31 @@ int main()
 
     vector<string> arr_temp = split(rtrim(arr_temp_temp));
 
-    vector<int> arr(arr_count);
+    if (arr_count >= 1 && arr_count <= 1e3 ) {
+        vector<int> arr(arr_count);
 
-    for (int i = 0; i < arr_count; i++) {
-        int arr_item = stoi(arr_temp[i]);
-
-        arr[i] = arr_item;
-    }
-
-    vector<int> res = reverseArray(arr);
-
-    for (size_t i = 0; i < res.size(); i++) {
-        fout << res[i];
-
-        if (i != res.size() - 1) {
-            fout << " ";
+        for (int i = 0; i < arr_count; i++) {
+            int arr_item = stoi(arr_temp[i]);
+            if (arr_item >= 1 && arr_item <= 1e4 ) {
+                arr[i] = arr_item;
+            }
         }
+
+        vector<int> res = reverseArray(arr);
+
+        for (size_t i = 0; i < res.size(); i++) {
+            fout << res[i];
+
+            if (i != res.size() - 1) {
+                fout << " ";
+            }
+        }
+
+        fout << "\n";
+
+        fout.close();
     }
 
-    fout << "\n";
-
-    fout.close();
 
     return 0;
 }
