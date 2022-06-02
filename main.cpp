@@ -20,7 +20,7 @@ vector<int> reverseArray(vector<int> a) {
 
     //create a count controlled loop that starts at the first index i and sets the element to the value of  (n-1)-i.
 
-    for (int i = 0; i < a.size(); i++) {
+    for (int i = 0; i < (a.size() / 2 ); i++) {
         tempValue = a[i];
         a[i] = a[((arraySize - 1) - i)];
         a[(arraySize - 1) - i] = tempValue;
