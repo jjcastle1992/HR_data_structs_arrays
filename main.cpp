@@ -14,6 +14,14 @@ vector<string> split(const string &);
  */
 
 vector<int> reverseArray(vector<int> a) {
+    //Sort the array from last element to first.
+
+    //create a count controlled loop that starts at the first index i and sets the element to the value of  n-i.
+    // e.g. index 0 should be replaced with the value at index n-0. For array of size 5, index 4 should be replaced with
+    // the value at  n-4.
+
+
+    //return the array
 
 }
 
